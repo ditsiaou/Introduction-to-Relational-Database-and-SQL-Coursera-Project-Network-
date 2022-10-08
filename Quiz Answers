@@ -1,0 +1,74 @@
+Question 1
+Which of the following statements is FALSE about relational databases?
+
+Tables in a relational database are always independent from each other.
+
+
+Question 2
+Which of the following is a valid SQL statement to select all the members who live in Texas from the table club_member?
+
+SELECT * FROM club_member WHERE  state_abbreviation = “TX”
+
+
+Question 3
+Which of the following is a valid SQL statement to select the last_name and first_name columns of the club_member table?
+
+SELECT last_name, first_name FROM club_member
+
+Question 4
+Which of the following should be added to the end of this SQL statement to sort our query results by professional_title?
+
+SELECT * FROM club_member WHERE city = “San Francisco”  _________________________
+
+ORDER BY professional_title
+
+
+Question 5
+Which of the following is a valid SQL statement to insert a row for a member named “Shino Yamaha” with a phone_number “4151234567” into the table club_member?
+
+INSERT INTO club_member SET first_name = “Shino”, last_name = “Yamaha”, phone_number = “4151234567”
+
+
+Question 6
+What does this SQL statement do?
+SELECT first_name, last_name
+
+FROM employee
+
+ORDER BY last_name DESC
+
+It selects the columns first_name, last_name from the table employee and sort the results by last_name in descending order.
+
+Question 7
+Which of these is a valid SQL statement to delete all the rows in the table model where the column type has a value “X”?
+
+DELETE FROM model WHERE type = “X”
+
+Question 8
+When this SQL statement is executed, what will happen?
+
+SELECT first_name, last_name, amount
+
+FROM club_member, invoice
+
+WHERE club_member.member_id = invoice.member_id
+
+It will join the tables club_member and invoice by member_id and list all the first_name, last_name and amounts of all the members who have invoices. 
+A member’s first_name and last_name will be repeated in each invoice if he/she has more than one.
+
+
+Question 9
+Which of the following is a valid SQL statement to link the club_member table to the tier table using tier_code and display each member’s first_name,
+last_name and tier.description?
+
+
+SELECT first_name, last_name, tier.description
+
+FROM club_member, tier
+
+WHERE club_member.tier_code = tier.code
+
+Question 10
+Which of these SQL statements will select all the members with last names that start with the capital letter “M” in the table club_member?
+
+SELECT * FROM club_member WHERE last_name LIKE “M%”
